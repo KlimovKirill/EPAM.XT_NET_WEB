@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPAM.Task1.1.1.RECTANGLE", "EPAM.Task1.1\EPAM.Task1.1.1.RECTANGLE.csproj", "{3C0E3749-EC4E-4892-9192-3DCCB5655F75}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPAM.Task1.1.1.Rectangle", "EPAM.Task1.1\EPAM.Task1.1.1.Rectangle.csproj", "{3C0E3749-EC4E-4892-9192-3DCCB5655F75}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPAM.Task1.1.2.TRIANGLE", "EPAM.Task1.1.2.TRIANGLE\EPAM.Task1.1.2.TRIANGLE.csproj", "{4B68E6C0-E978-4896-9E68-51DDF796E5D9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPAM.Task1.1.2.Triangle", "EPAM.Task1.1.2.TRIANGLE\EPAM.Task1.1.2.Triangle.csproj", "{4B68E6C0-E978-4896-9E68-51DDF796E5D9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPAM.Task1.1.3.AnotherTriangle", "EPAM.Task1.1.3.AnotherTriangle\EPAM.Task1.1.3.AnotherTriangle.csproj", "{89BB3814-DF05-47F1-8B04-85770703B814}"
 EndProject
