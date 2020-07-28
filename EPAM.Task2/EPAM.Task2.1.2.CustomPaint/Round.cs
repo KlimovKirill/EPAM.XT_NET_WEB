@@ -20,9 +20,9 @@ namespace EPAM.Task2._1._2.CustomPaint
             this.Radius = r;
         }
 
-        public override void DrawFigure()
+        public override string DrawFigure()
         {
-            Console.WriteLine($"Round (A,r). A = ({this.X}, {this.Y}), r = {this.Radius}");
+            return $"Round (A,r). A = ({this.X}, {this.Y}), r = {this.Radius}";
         }
     }
 }

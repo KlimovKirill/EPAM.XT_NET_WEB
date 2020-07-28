@@ -71,9 +71,9 @@ namespace EPAM.Task2._1._2.CustomPaint
             }
         }
 
-        public override void DrawFigure()
+        public override string DrawFigure()
         {
-            Console.WriteLine($"Circle (A,r). A = ({this.a.X}, {this.a.Y}), r = {this.r}");
+            return $"Circle (A,r). A = ({this.a.X}, {this.a.Y}), r = {this.r}";
         }
     }
 }

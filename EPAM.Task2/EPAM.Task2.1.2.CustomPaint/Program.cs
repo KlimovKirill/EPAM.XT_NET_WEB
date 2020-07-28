@@ -28,7 +28,12 @@ namespace EPAM.Task2._1._2.CustomPaint
                 Console.WriteLine("Error. Wrong number. It must be positive integer");
             }
 
-            Console.WriteLine($"{Environment.NewLine}Enter {n} numbers from 1 to 5. 1 - Line, 2 - Circle, 3 - Rectangle, 4 - Round, 5 - Ring");
+            Console.WriteLine($"{Environment.NewLine}Enter {n} numbers from 1 to 5: " +
+                $"{Environment.NewLine}1 - Line," +
+                $"{Environment.NewLine}2 - Circle," +
+                $"{Environment.NewLine}3 - Rectangle," +
+                $"{Environment.NewLine}4 - Round," +
+                $"{Environment.NewLine}5 - Ring");
             int type = 0;
             try
             {
@@ -100,7 +105,7 @@ namespace EPAM.Task2._1._2.CustomPaint
                 Console.WriteLine($"{Environment.NewLine}Drawing..{Environment.NewLine}");
                 for (int i = 0; i < figureMassive.Length; i++)
                 {
-                    figureMassive[i].DrawFigure();
+                    Console.WriteLine(figureMassive[i].DrawFigure());
                 }
             }
             catch

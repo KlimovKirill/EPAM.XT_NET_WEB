@@ -23,9 +23,9 @@ namespace EPAM.Task2._1._2.CustomPaint
             this.b.Y = y2;
         }
 
-        public override void DrawFigure()
+        public override string DrawFigure()
         {
-            Console.WriteLine($"Line (A,B). A = ({this.a.X}, {this.a.Y}), B = ({this.b.X}, {this.b.Y})");
+            return $"Line (A,B). A = ({this.a.X}, {this.a.Y}), B = ({this.b.X}, {this.b.Y})";
         }
     }
 }

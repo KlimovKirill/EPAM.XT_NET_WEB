@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EPAM.Task2._1._2.CustomPaint
 {
-    public class Point : Figure
+    public class Point 
     {
         private int x;
         private int y;
@@ -46,5 +46,7 @@ namespace EPAM.Task2._1._2.CustomPaint
                 this.y = value;
             }
         }
+
+        
     }
 }

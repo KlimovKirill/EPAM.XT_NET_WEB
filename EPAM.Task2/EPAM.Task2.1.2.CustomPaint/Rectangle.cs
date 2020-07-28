@@ -35,9 +35,9 @@ namespace EPAM.Task2._1._2.CustomPaint
             }
         }
 
-        public override void DrawFigure()
+        public override string DrawFigure()
         {
-            Console.WriteLine($"Rectangle (A,B). A = ({this.a.X}, {this.a.Y}), B = ({this.b.X}, {this.b.Y}), C = ({this.c.X}, {this.c.Y}), D = ({this.d.X}, {this.d.Y})");
+            return $"Rectangle (A,B). A = ({this.a.X}, {this.a.Y}), B = ({this.b.X}, {this.b.Y}), C = ({this.c.X}, {this.c.Y}), D = ({this.d.X}, {this.d.Y})";
         }
     }
 }

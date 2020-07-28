@@ -22,9 +22,9 @@ namespace EPAM.Task2._1._2.CustomPaint
             this.outer = new Round(x, y, out_Rad);
         }
 
-        public override void DrawFigure()
+        public override string DrawFigure()
         {
-            Console.WriteLine($"Ring (A,r,R). A = ({this.inner.X}, {this.inner.Y}), r = {this.inner.Radius}, R = {this.outer.Radius}");
+            return $"Ring (A,r,R). A = ({this.inner.X}, {this.inner.Y}), r = {this.inner.Radius}, R = {this.outer.Radius}";
         }
     }
 }

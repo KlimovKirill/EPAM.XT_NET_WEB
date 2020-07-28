@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace EPAM.Task2._1._2.CustomPaint
 {
-    public class Figure
+    public abstract class Figure
     {
-        public virtual void DrawFigure()
-        {
-        }
+        public abstract string DrawFigure();
     }
 }
