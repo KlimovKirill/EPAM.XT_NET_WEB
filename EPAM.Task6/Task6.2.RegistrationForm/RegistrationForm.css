@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.registr_form{
+    width: 400px;
+    border: 4px solid #0075B2;
+    background: #0690CF;
+    color: #ffffff;
+    font-family: Arial, serif;
+    font-size: 15pt;
+    margin: 10px;
+    padding: 20px 30px 20px 20px;
+}
+.hr{
+    height: 1px;
+    width: 500px;
+    background: #ffffff;
+    margin: 10px 0px 30px -20px;
+    padding: 0;
+}
+.e-mail input{
+    width: 90%;
+    margin-bottom: 30px;
+    height: 20px;
+}
+.passw {
+    width: 45%;
+    float: left;
+    display: block;
+    margin-right: 4.5%;
+    margin-bottom: 30px;
+}
+.passw_again {
+    width: 45%;
+    clear: both;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+.passw input, .passw_again input{
+    width: 90%;
+    height: 20px;
+}
+.hr ~ input{
+    width: 100px;
+    height: 30px;
+    background: #ffdf7f;
+    color: #000000;
+    border: none;
+    font-family: Arial, serif;
+    font-size: 11pt;
+}

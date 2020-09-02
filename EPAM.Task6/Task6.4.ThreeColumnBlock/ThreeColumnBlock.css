@@ -1,0 +1,54 @@
+body {
+    font: 12px Tahoma, sans-serif;
+    background: #4e6379;
+}
+.wrapper {
+    background: #fff;
+    overflow: hidden;
+    width: 602px;
+    background: #fff;
+    box-shadow: 0 25px 40px rgba(0,0,0,0.5);
+    border-radius: 5px;
+    margin: auto;
+}
+.item {
+    float: left;
+    width: 200px;
+    border-left: 1px solid #d9d9d9;
+    text-align: center;
+    margin: 10px 0;
+}
+.item:first-child { 
+    border: none; 
+}
+.virt{
+    width: 61px; 
+    height: 42px;
+    background: url(images.png) no-repeat;
+    margin: auto;
+}
+.cloud{
+    width: 61px;
+    height: 42px;
+    margin: auto;
+    background: url(images.png) no-repeat;
+    background-position: 0 -42px;
+}
+.server { 
+    width: 61px; 
+    height: 42px;
+    background: url(images.png) no-repeat;
+    margin: auto;
+    background-position: 0 -84px;	
+}
+h3 { 
+    color: #f56332; 
+}
+.button {
+    background: #f56332;
+    display: inline-block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 2px;
+}
