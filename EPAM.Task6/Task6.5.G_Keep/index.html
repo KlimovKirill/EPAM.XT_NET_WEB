@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G-Keep</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="overlay" id="overlay">
+    <div class="modal-window-container" id="modal"> 
+        <div class="modal-window-input">
+            <div class="note-header">
+                <input type="text" placeholder="Введите заголовок" class="note-header-input" id="note-header-input">
+            </div>
+            <div class="note-text">
+                <textarea name="" placeholder="Текст заметки" class="note-text-textarea" id="note-text-textarea"></textarea>
+            </div>
+        </div>   
+
+        <div class="modal-window-buttons">
+            <button class="close-button"><a href="#">Закрыть</a></button>
+            <button class="save-button">Сохранить</button>
+        </div> 
+    </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="search-container">
+            <form class="search">
+                <!-- <input type="submit" class="search-button" value="Search" /> -->
+                <div><img src="/images/search.png"/></div>
+                <input id="search_text" class="form-control" type="text" size="20" placeholder="Поиск">
+            </form>
+        </div>
+
+        <div class="notes-container" id="notes"> 
+        </div>
+        
+        <div class="add-button" id="add-button">
+            <a href="#overlay">
+                <img src="/images/addNoteButton.png" id="addnotebutton">
+            </a>
+        </div>       
+    </div>
+
+    <script src="MiniCRUD.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
