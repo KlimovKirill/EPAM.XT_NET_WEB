@@ -50,9 +50,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\UsersAndAwords.PL.Interface\UsersAndAwords.PL.Interface.csproj">
+    <ProjectReference Include="..\UsersAndAwords.PL.Interface\UsersAndAwards.PL.Interface.csproj">
       <Project>{c2c33ada-20db-4c42-8ec9-2ddc1ba15f5f}</Project>
-      <Name>UsersAndAwords.PL.Interface</Name>
+      <Name>UsersAndAwards.PL.Interface</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

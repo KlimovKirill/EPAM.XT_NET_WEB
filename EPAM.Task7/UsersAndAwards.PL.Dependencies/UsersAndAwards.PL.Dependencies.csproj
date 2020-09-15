@@ -45,13 +45,13 @@
     <Compile Include="UsersAndAwardsPLDependencies.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\UsersAndAwords.PL.Console\UsersAndAwords.PL.Console.csproj">
+    <ProjectReference Include="..\UsersAndAwords.PL.Console\UsersAndAwards.PL.Console.csproj">
       <Project>{3d1e94b2-9682-4d80-8e0a-d0fae5ee4149}</Project>
-      <Name>UsersAndAwords.PL.Console</Name>
+      <Name>UsersAndAwards.PL.Console</Name>
     </ProjectReference>
-    <ProjectReference Include="..\UsersAndAwords.PL.Interface\UsersAndAwords.PL.Interface.csproj">
+    <ProjectReference Include="..\UsersAndAwords.PL.Interface\UsersAndAwards.PL.Interface.csproj">
       <Project>{c2c33ada-20db-4c42-8ec9-2ddc1ba15f5f}</Project>
-      <Name>UsersAndAwords.PL.Interface</Name>
+      <Name>UsersAndAwards.PL.Interface</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

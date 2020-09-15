@@ -50,9 +50,9 @@
       <Project>{3457ab87-971b-4c55-84ba-7960af18ce49}</Project>
       <Name>UsersAndAwards.DAL.Interface</Name>
     </ProjectReference>
-    <ProjectReference Include="..\UsersAndAwords.Entities\UsersAndAwords.Entities.csproj">
+    <ProjectReference Include="..\UsersAndAwords.Entities\UsersAndAwards.Entities.csproj">
       <Project>{1a188838-3c1e-4e5c-83c1-19ce4d117ad1}</Project>
-      <Name>UsersAndAwords.Entities</Name>
+      <Name>UsersAndAwards.Entities</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

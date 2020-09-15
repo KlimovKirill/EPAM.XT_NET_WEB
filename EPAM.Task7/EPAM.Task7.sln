@@ -23,13 +23,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsersAndAwards.BLL.Interfac
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsersAndAwards.BLL.Dependencies", "UsersAndAwards.BLL.Dependencies\UsersAndAwards.BLL.Dependencies.csproj", "{68EFD268-1F05-490A-9FD8-57BECDC6B25A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsersAndAwords.Entities", "UsersAndAwords.Entities\UsersAndAwords.Entities.csproj", "{1A188838-3C1E-4E5C-83C1-19CE4D117AD1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsersAndAwards.Entities", "UsersAndAwords.Entities\UsersAndAwards.Entities.csproj", "{1A188838-3C1E-4E5C-83C1-19CE4D117AD1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsersAndAwards.PL.Dependencies", "UsersAndAwards.PL.Dependencies\UsersAndAwards.PL.Dependencies.csproj", "{1C75E1C9-9BE7-489C-AE14-4B1B1FF45D4D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsersAndAwords.PL.Interface", "UsersAndAwords.PL.Interface\UsersAndAwords.PL.Interface.csproj", "{C2C33ADA-20DB-4C42-8EC9-2DDC1BA15F5F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsersAndAwards.PL.Interface", "UsersAndAwords.PL.Interface\UsersAndAwards.PL.Interface.csproj", "{C2C33ADA-20DB-4C42-8EC9-2DDC1BA15F5F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsersAndAwords.PL.Console", "UsersAndAwords.PL.Console\UsersAndAwords.PL.Console.csproj", "{3D1E94B2-9682-4D80-8E0A-D0FAE5EE4149}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsersAndAwards.PL.Console", "UsersAndAwords.PL.Console\UsersAndAwards.PL.Console.csproj", "{3D1E94B2-9682-4D80-8E0A-D0FAE5EE4149}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
