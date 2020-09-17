@@ -50,6 +50,18 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\UsersAndAwards.BLL.Dependencies\UsersAndAwards.BLL.Dependencies.csproj">
+      <Project>{68EFD268-1F05-490A-9FD8-57BECDC6B25A}</Project>
+      <Name>UsersAndAwards.BLL.Dependencies</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UsersAndAwards.BLL.Interface\UsersAndAwards.BLL.Interface.csproj">
+      <Project>{D1686A41-1B94-4946-8B16-15D0B9AED09F}</Project>
+      <Name>UsersAndAwards.BLL.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UsersAndAwords.Entities\UsersAndAwards.Entities.csproj">
+      <Project>{1A188838-3C1E-4E5C-83C1-19CE4D117AD1}</Project>
+      <Name>UsersAndAwards.Entities</Name>
+    </ProjectReference>
     <ProjectReference Include="..\UsersAndAwords.PL.Interface\UsersAndAwards.PL.Interface.csproj">
       <Project>{c2c33ada-20db-4c42-8ec9-2ddc1ba15f5f}</Project>
       <Name>UsersAndAwards.PL.Interface</Name>

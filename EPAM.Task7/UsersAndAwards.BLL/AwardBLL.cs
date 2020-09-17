@@ -5,41 +5,53 @@ using System.Text;
 using System.Threading.Tasks;
 using UsersAndAwards.BLL.Interface;
 using UsersAndAwards.DAL;
+using UsersAndAwards.DAL.Dependencies;
 using UsersAndAwords.Entities;
 
 namespace UsersAndAwards.BLL
 {
     public class AwardBLL : IAwardBLL
     {
-        private IAwardDAO _awardDAO;
+        private readonly IAwardDAO _awardDAL;
+
+        public AwardBLL()
+        {
+            _awardDAL = UsersAndAwardsDALDependencies.AwardDAO;
+        }
+
         public void Add(Award award)
         {
-            throw new NotImplementedException();
+            _awardDAL.Add(award);
+            _awardDAL.SaveAwardStorage();
         }
 
         public void AddAwardToUser(int awardId, int userId)
         {
-            throw new NotImplementedException();
+            _awardDAL.AddAwardToUser(awardId, userId);
+            _awardDAL.SaveAwardToUserStorage();
         }
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            _awardDAL.Delete(id);
+            _awardDAL.SaveAwardStorage();
         }
 
         public IEnumerable<Award> GetAll()
         {
-            throw new NotImplementedException();
+            return _awardDAL.GetAllAwards();
         }
 
         public Award GetById(int id)
         {
-            throw new NotImplementedException();
+            return _awardDAL.GetById(id);
         }
 
         public Dictionary<int, List<int>> GetDictionaryOfAwardsAndUsers()
         {
-            throw new NotImplementedException();
+            return _awardDAL.GetDictionaryOfAwardsAndUsers();
         }
+
+       
     }
 }

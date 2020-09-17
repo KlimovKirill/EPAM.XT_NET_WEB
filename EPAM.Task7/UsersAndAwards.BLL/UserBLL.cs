@@ -4,30 +4,42 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UsersAndAwards.BLL.Interface;
+using UsersAndAwards.DAL;
+using UsersAndAwards.DAL.Dependencies;
 using UsersAndAwords.Entities;
 
 namespace UsersAndAwards.BLL
 {
     public class UserBLL : IUserBLL
     {
+        private readonly IUserDAO _userDAL;
+
+        public UserBLL() 
+        {
+            _userDAL = UsersAndAwardsDALDependencies.UserDAO;
+        }
+
         public void Add(User user)
         {
-            throw new NotImplementedException();
+            _userDAL.Add(user);
+            _userDAL.SaveUserStorage();
         }
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            _userDAL.Delete(id);
+            _userDAL.SaveUserStorage();
         }
 
         public IEnumerable<User> GetAll()
         {
-            throw new NotImplementedException();
+            return _userDAL.GetAllUsers();
         }
 
         public User GetById(int id)
         {
-            throw new NotImplementedException();
+            return _userDAL.GetById(id);
         }
+       
     }
 }

@@ -11,11 +11,6 @@ namespace UsersAndAwards.DAL.Dependencies
 
         public static IUserDAO UserDAO => _userDAO ?? (_userDAO = new UserDAO());
 
-        public static void SaveUserInfo()
-        {
-            UserDAO.SaveUserStorage();
-        }
-
         public static void SaveAwardInfo()
         {
             AwardDAO.SaveAwardStorage();
@@ -24,6 +19,11 @@ namespace UsersAndAwards.DAL.Dependencies
         public static void SaveAwardToUserInfo()
         {
             AwardDAO.SaveAwardToUserStorage();
+        }
+
+        public static void SaveUserInfo()
+        {
+            UserDAO.SaveUserStorage();
         }
 
     }

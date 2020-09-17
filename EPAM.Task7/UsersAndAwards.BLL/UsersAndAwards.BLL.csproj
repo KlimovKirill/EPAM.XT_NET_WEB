@@ -50,6 +50,10 @@
       <Project>{d1686a41-1b94-4946-8b16-15d0b9aed09f}</Project>
       <Name>UsersAndAwards.BLL.Interface</Name>
     </ProjectReference>
+    <ProjectReference Include="..\UsersAndAwards.DAL.Dependencies\UsersAndAwards.DAL.Dependencies.csproj">
+      <Project>{4d0043a1-bffd-43a0-bd03-560f3ec5d96a}</Project>
+      <Name>UsersAndAwards.DAL.Dependencies</Name>
+    </ProjectReference>
     <ProjectReference Include="..\UsersAndAwars.DAL.Interface\UsersAndAwards.DAL.Interface.csproj">
       <Project>{3457ab87-971b-4c55-84ba-7960af18ce49}</Project>
       <Name>UsersAndAwards.DAL.Interface</Name>
