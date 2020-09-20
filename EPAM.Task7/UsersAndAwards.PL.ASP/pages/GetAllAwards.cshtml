@@ -1,0 +1,33 @@
+﻿@{
+    Layout = null;
+}
+@using UsersAndAwards.BLL.Dependencies
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Show Awards</title>
+</head>
+<body>
+    <div>
+        ID | Title
+
+        @{
+
+
+            var _userBLL = UsersAndAwardsBLLDependencies.UserLogic;
+            var _awardBLL = UsersAndAwardsBLLDependencies.AwardLogic;
+
+            foreach (var award in _awardBLL.GetAll())
+            {
+                <div>
+                    @award
+                </div>
+            }
+
+        }
+    </div>
+</body>
+</html>

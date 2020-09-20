@@ -1,0 +1,56 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Users and Awards</title>
+</head>
+<body>
+    <div>
+
+        <p>Users Control buttons</p><br />
+        <div class="userbuttons">
+            <button class="button" id="showUsers">Show all users</button><br>
+            <button class="button" id="addUser">Add user</button><br>
+            <button class="button" id="editUser">Edit user</button><br>
+            <button class="button" id="delUser">Delete user</button><br>
+            <button class="button" id="getUserById">Get user by ID</button><br>
+
+        </div>
+        <p>Awards Control buttons</p>
+        <div class="userbuttons">
+            <button class="button" id="addAward">Add award</button><br>
+            <button class="button" id="delAward">Delete award</button><br>
+            <button class="button" id="editAward">Edit award</button><br>
+            <button class="button" id="showAwards">Show all awards</button><br>
+            <button class="button" id="getAwardById">Get award by ID</button><br>
+            <button class="button" id="addAwardToUser">Add award to user</button><br>
+        </div>
+
+
+        @{
+
+            if (!File.Exists("C:\\AwardStorage.txt"))
+            {
+                File.Create("C:\\AwardStorage.txt");
+            }
+
+            if (!File.Exists("C:\\UserStorage.txt"))
+            {
+                File.Create("C:\\UserStorage.txt");
+            }
+
+            if (!File.Exists("C:\\AwardToUsersStorage.txt"))
+            {
+                File.Create("C:\\AwardToUsersStorage.txt");
+            }
+
+        }
+    </div>
+    <script src="~/js/Scripts.js"></script>
+</body>
+</html>

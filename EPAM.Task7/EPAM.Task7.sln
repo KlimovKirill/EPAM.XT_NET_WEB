@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsersAndAwards.PL.Interface
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsersAndAwards.PL.Console", "UsersAndAwords.PL.Console\UsersAndAwards.PL.Console.csproj", "{3D1E94B2-9682-4D80-8E0A-D0FAE5EE4149}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsersAndAwards.PL.ASP", "UsersAndAwards.PL.ASP\UsersAndAwards.PL.ASP.csproj", "{C8A83C55-1D15-4FA7-B068-D41DE5876AFA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +79,10 @@ Global
 		{3D1E94B2-9682-4D80-8E0A-D0FAE5EE4149}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D1E94B2-9682-4D80-8E0A-D0FAE5EE4149}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D1E94B2-9682-4D80-8E0A-D0FAE5EE4149}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8A83C55-1D15-4FA7-B068-D41DE5876AFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8A83C55-1D15-4FA7-B068-D41DE5876AFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8A83C55-1D15-4FA7-B068-D41DE5876AFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8A83C55-1D15-4FA7-B068-D41DE5876AFA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -92,6 +98,7 @@ Global
 		{1C75E1C9-9BE7-489C-AE14-4B1B1FF45D4D} = {53F015F5-427C-4BB0-90B2-6A46B8C48AFB}
 		{C2C33ADA-20DB-4C42-8EC9-2DDC1BA15F5F} = {53F015F5-427C-4BB0-90B2-6A46B8C48AFB}
 		{3D1E94B2-9682-4D80-8E0A-D0FAE5EE4149} = {53F015F5-427C-4BB0-90B2-6A46B8C48AFB}
+		{C8A83C55-1D15-4FA7-B068-D41DE5876AFA} = {53F015F5-427C-4BB0-90B2-6A46B8C48AFB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {87FC733D-ACAE-400E-8C76-9CB7208D4187}

@@ -1,0 +1,43 @@
+﻿@{
+    Layout = null;
+}
+@using UsersAndAwards.BLL.Dependencies
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Get All Users</title>
+</head>
+<body>
+    ID | Name | Age
+
+    @{
+
+        var _userBLL = UsersAndAwardsBLLDependencies.UserLogic;
+        var _awardBLL = UsersAndAwardsBLLDependencies.AwardLogic;
+
+        foreach (var user in _userBLL.GetAll())
+        {
+            <div> @user </div>
+
+            <p>Awards:</p>
+
+            Dictionary<int, List<int>> awardId_usersIds = _awardBLL.GetDictionaryOfAwardsAndUsers();
+
+            foreach (var item in awardId_usersIds)
+            {
+                if (item.Value.Contains(user.ID))
+                {
+                    <div>@_awardBLL.GetById(item.Key)</div>
+                }
+            }
+
+            <br />
+
+        }
+
+    }
+</body>
+</html>

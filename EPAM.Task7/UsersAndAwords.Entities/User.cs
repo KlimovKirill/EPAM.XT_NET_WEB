@@ -24,7 +24,7 @@ namespace UsersAndAwords.Entities
 
         public override string ToString()
         {
-            return $"{ID} {Name} {DateOfBirth} {Age}";
+            return $"{ID} {Name} {Age}";
         }
     }
 }

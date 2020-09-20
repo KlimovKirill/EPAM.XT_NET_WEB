@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using UsersAndAwords.Entities;
 
@@ -63,7 +64,8 @@ namespace UsersAndAwards.DAL
 
         public void SaveAwardStorage()
         {
-            using (StreamWriter streamWriter = new StreamWriter("AwardStorage.txt"))
+            
+            using (StreamWriter streamWriter = new StreamWriter("C:\\AwardStorage.txt"))
             {
                 foreach (var award in repoAwards)
                 {
@@ -75,7 +77,7 @@ namespace UsersAndAwards.DAL
 
         public void SaveAwardToUserStorage()
         {
-            using (StreamWriter streamWriter = new StreamWriter("AwardToUsersStorage.txt"))
+            using (StreamWriter streamWriter = new StreamWriter("C:\\AwardToUsersStorage.txt"))
             {
                 foreach (var item in awardIdUserIDs)
                 {
@@ -95,12 +97,12 @@ namespace UsersAndAwards.DAL
         {
             Dictionary<int, Award> tempRepo = new Dictionary<int, Award>();
 
-            if (!File.Exists("AwardStorage.txt"))
+            if (!File.Exists("C:\\AwardStorage.txt"))
             {
                 return tempRepo;
             }
 
-            using (StreamReader sr = new StreamReader("AwardStorage.txt"))
+            using (StreamReader sr = new StreamReader("C:\\AwardStorage.txt"))
             {
                 while (!sr.EndOfStream)
                 {
@@ -124,12 +126,12 @@ namespace UsersAndAwards.DAL
         {
             Dictionary<int, List<int>> tempRepo = new Dictionary<int, List<int>>();
 
-            if (!File.Exists("AwardToUserStorage.txt"))
+            if (!File.Exists("C:\\AwardToUsersStorage.txt"))
             {
                 return tempRepo;
             }
 
-            using (StreamReader sr = new StreamReader("AwardToUserStorage.txt"))
+            using (StreamReader sr = new StreamReader("C:\\AwardToUsersStorage.txt"))
             {
                 while (!sr.EndOfStream)
                 {
@@ -138,20 +140,20 @@ namespace UsersAndAwards.DAL
 
                     var nums = uIds
                         .Split(new char[] { ' ', ',' }, StringSplitOptions.RemoveEmptyEntries)
-                        .Select(n => int.Parse(n));
+                        .Select(n => int.Parse(n)).ToList();
 
-                    List<int> tempList = new List<int>();
-
-                    foreach (var i in nums)
-                    {
-                        tempList.Add(i);
-                    }
-
-                    tempRepo.Add(aId, tempList);
+                    tempRepo.Add(aId, nums);
                 }
             }
 
             return tempRepo;
+        }
+
+        public void Edit(Award award)
+        {
+            var editingAward = GetById(award.ID);
+
+            editingAward.Title = award.Title;
         }
     }
 }

@@ -1,0 +1,38 @@
+﻿@{
+    Layout = null;
+}
+@using UsersAndAwards.BLL.Dependencies
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Add Award to User</title>
+</head>
+<body>
+    <form action="~/pages/AddAwardToUser.cshtml" method="post">
+        <label>Enter Award's ID:</label>
+        <input type="number" name="aID" value="" />
+
+        <label>Enter User's ID for whom u want to add the award:</label>
+        <input type="number" name="uID" value="" />
+
+        <button type="submit">Submit</button>
+    </form>
+
+    @{
+        if (IsPost)
+        {
+            int aID = int.Parse(Request.Params["aID"]);
+            int uID = int.Parse(Request.Params["uID"]);
+
+            var _userBLL = UsersAndAwardsBLLDependencies.UserLogic;
+            var _awardBLL = UsersAndAwardsBLLDependencies.AwardLogic;
+
+            _awardBLL.AddAwardToUser(aID, uID);
+        }
+
+    }
+</body>
+</html>

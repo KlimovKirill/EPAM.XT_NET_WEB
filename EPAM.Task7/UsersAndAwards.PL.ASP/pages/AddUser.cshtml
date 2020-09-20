@@ -1,0 +1,43 @@
+﻿@{
+    Layout = null;
+}
+@using UsersAndAwards.BLL.Dependencies
+@using UsersAndAwords.Entities;
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Add User</title>
+</head>
+<body>
+    <form action="~/pages/AddUser.cshtml" method="post">
+        <label>User's Name</label>
+        <input type="text" name="userName" value="" />
+        <label>User's Date of Birth</label>
+        <input type="date" name="bdate" value="" />
+        <button type="submit">Submit</button>
+    </form>
+
+    @{
+        if (IsPost)
+        {
+
+            string name = Request.Params["userName"];
+            DateTime bdate = DateTime.Parse(Request.Params["bdate"]);
+
+
+            var _userBLL = UsersAndAwardsBLLDependencies.UserLogic;
+            var _awardBLL = UsersAndAwardsBLLDependencies.AwardLogic;
+
+            var user = new User();
+
+            user.Name = name;
+            user.DateOfBirth = bdate;
+            _userBLL.Add(user);
+        }
+
+    }
+</body>
+</html>

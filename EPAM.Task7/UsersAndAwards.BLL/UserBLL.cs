@@ -31,6 +31,12 @@ namespace UsersAndAwards.BLL
             _userDAL.SaveUserStorage();
         }
 
+        public void Edit(User user)
+        {
+            _userDAL.Edit(user);
+            _userDAL.SaveUserStorage();
+        }
+
         public IEnumerable<User> GetAll()
         {
             return _userDAL.GetAllUsers();

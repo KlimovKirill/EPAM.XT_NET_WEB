@@ -41,7 +41,7 @@ namespace UsersAndAwards.DAL
 
         public void SaveUserStorage()
         {
-            using (StreamWriter streamWriter = new StreamWriter("UserStorage.txt"))
+            using (StreamWriter streamWriter = new StreamWriter("C:\\UserStorage.txt"))
             {
                 foreach (var user in repoUsers)
                 {
@@ -56,12 +56,12 @@ namespace UsersAndAwards.DAL
         {
             Dictionary<int, User> tempRepo = new Dictionary<int, User>();
 
-            if (!File.Exists("UserStorage.txt"))
+            if (!File.Exists("C:\\UserStorage.txt"))
             {
                 return tempRepo;
             }
 
-            using (StreamReader sr = new StreamReader("UserStorage.txt"))
+            using (StreamReader sr = new StreamReader("C:\\UserStorage.txt"))
             {
                 while (!sr.EndOfStream)
                 {
@@ -81,6 +81,22 @@ namespace UsersAndAwards.DAL
             }
 
             return tempRepo;
+        }
+
+        public void Edit(User user)
+        {
+            var editingUser = GetById(user.ID);
+
+            if (editingUser.Name != user.Name)
+            {
+                editingUser.Name = user.Name;
+            }
+
+            if (editingUser.DateOfBirth != user.DateOfBirth)
+            {
+                editingUser.DateOfBirth = user.DateOfBirth;
+            }
+
         }
     }
 }

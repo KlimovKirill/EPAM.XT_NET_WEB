@@ -1,0 +1,37 @@
+﻿@{
+    Layout = null;
+}
+@using UsersAndAwards.BLL.Dependencies
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Get User By ID</title>
+</head>
+<body>
+    <form action="~/pages/GetUserById.cshtml" method="post">
+        <label>Enter User's ID which you want to see:</label>
+        <input type="number" name="id" value="" />
+
+        <button type="submit">Submit</button>
+    </form>
+
+    @{
+        if (IsPost)
+        {
+            int uID = int.Parse(Request.Params["id"]);
+
+            var _userBLL = UsersAndAwardsBLLDependencies.UserLogic;
+            var _awardBLL = UsersAndAwardsBLLDependencies.AwardLogic;
+
+            <div>
+                ID | Name | Date Of Birth | Age <br />
+                @_userBLL.GetById(uID);
+            </div>
+        }
+
+    }
+</body>
+</html>

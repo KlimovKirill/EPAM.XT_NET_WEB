@@ -1,0 +1,40 @@
+﻿@{
+    Layout = null;
+
+}
+@using UsersAndAwards.BLL.Dependencies
+@using UsersAndAwords.Entities;
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Add Award</title>
+</head>
+<body>
+    <form action="~/pages/AddAward.cshtml" method="post">
+        <label>Award's title</label>
+        <input type="text" name="awardTitle" value="" />
+        <button type="submit">Submit</button>
+    </form>
+
+    @{
+        if (IsPost)
+        {
+            //title
+            string title = Request.Params["awardTitle"];
+
+
+            var _userBLL = UsersAndAwardsBLLDependencies.UserLogic;
+            var _awardBLL = UsersAndAwardsBLLDependencies.AwardLogic;
+
+            var award = new Award ();
+
+            award.Title = title;
+            _awardBLL.Add(award);
+        }
+
+    }
+</body>
+</html>

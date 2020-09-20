@@ -1,0 +1,36 @@
+﻿@{
+    Layout = null;
+}
+@using UsersAndAwards.BLL.Dependencies
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete Award</title>
+</head>
+<body>
+    <form action="~/pages/DeleteAward.cshtml" method="post">
+        <label>Enter Award's ID which you want to delete:</label>
+        <input type="number" name="aID" value="" />
+
+        <button type="button" id="Sbmt">Submit</button>
+        <button type="submit" id="realSbmt">Submit</button>
+    </form>
+
+    @{
+        if (IsPost)
+        {
+            int aID = int.Parse(Request.Params["aID"]);
+
+            var _userBLL = UsersAndAwardsBLLDependencies.UserLogic;
+            var _awardBLL = UsersAndAwardsBLLDependencies.AwardLogic;
+
+            _awardBLL.Delete(aID);
+        }
+
+    }
+    <script src="~/js/DeleteAward.js"></script>
+</body>
+</html>

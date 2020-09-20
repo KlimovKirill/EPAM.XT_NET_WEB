@@ -13,6 +13,8 @@ namespace UsersAndAwards.BLL.Interface
 
         void Delete(int id);
 
+        void Edit(User user);
+
         User GetById(int id);
 
         IEnumerable<User> GetAll();

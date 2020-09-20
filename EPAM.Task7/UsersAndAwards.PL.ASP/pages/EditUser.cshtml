@@ -1,0 +1,49 @@
+﻿@{
+    Layout = null;
+
+    var _userBLL = UsersAndAwardsBLLDependencies.UserLogic;
+    var _awardBLL = UsersAndAwardsBLLDependencies.AwardLogic;
+}
+@using UsersAndAwards.BLL.Dependencies;
+@using UsersAndAwords.Entities;
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit User</title>
+</head>
+<body>
+    <form action="~/pages/EditUser.cshtml" method="post">
+        <label>Enter User's ID which you want to edit:</label>
+        <input type="number" name="uID" value="" />
+        <br />
+        <label>Enter new User's Name:</label>
+        <input type="text" name="uName" value="" />
+        <br />
+        <label>Enter new User's Date of birth:</label>
+        <input type="text" name="uDateOfBirth" value="" />
+
+        <button type="submit">Submit</button>
+    </form>
+
+    @{
+        if (IsPost)
+        {
+            int uID = int.Parse(Request.Params["uID"]);
+            string uName = Request.Params["uName"];
+            DateTime dateOfBirth = DateTime.Parse(Request.Params["uDateOfBirth"]);
+
+            var user = new User();
+
+            user.ID = uID;
+            user.Name = uName;
+            user.DateOfBirth = dateOfBirth;
+
+            _userBLL.Edit(user);
+        }
+
+    }
+</body>
+</html>

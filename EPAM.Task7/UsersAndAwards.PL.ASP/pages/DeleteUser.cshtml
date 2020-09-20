@@ -1,0 +1,34 @@
+﻿@{
+    Layout = null;
+}
+@using UsersAndAwards.BLL.Dependencies
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete User</title>
+</head>
+<body>
+    <form action="~/pages/DeleteUser.cshtml" method="post">
+        <label>Enter User's ID which you want to delete:</label>
+        <input type="number" name="uID" value="" />
+
+        <button type="submit">Submit</button>
+    </form>
+
+    @{
+        if (IsPost)
+        {
+            int uID = int.Parse(Request.Params["uID"]);
+
+            var _userBLL = UsersAndAwardsBLLDependencies.UserLogic;
+            var _awardBLL = UsersAndAwardsBLLDependencies.AwardLogic;
+
+            _userBLL.Delete(uID);
+        }
+
+    }
+</body>
+</html>

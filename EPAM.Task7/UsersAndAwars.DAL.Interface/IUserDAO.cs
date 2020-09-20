@@ -9,6 +9,8 @@ namespace UsersAndAwards.DAL
 
         bool Delete(int id);
 
+        void Edit(User user);
+
         User GetById(int id);
 
         IEnumerable<User> GetAllUsers();

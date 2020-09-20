@@ -37,6 +37,12 @@ namespace UsersAndAwards.BLL
             _awardDAL.SaveAwardStorage();
         }
 
+        public void Edit(Award award)
+        {
+            _awardDAL.Edit(award);
+            _awardDAL.SaveAwardStorage();
+        }
+
         public IEnumerable<Award> GetAll()
         {
             return _awardDAL.GetAllAwards();

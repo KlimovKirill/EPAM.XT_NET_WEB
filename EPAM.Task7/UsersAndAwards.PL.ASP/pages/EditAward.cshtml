@@ -1,0 +1,47 @@
+﻿@{
+    Layout = null;
+
+    var _userBLL = UsersAndAwardsBLLDependencies.UserLogic;
+    var _awardBLL = UsersAndAwardsBLLDependencies.AwardLogic;
+}
+@using UsersAndAwards.BLL.Dependencies;
+@using UsersAndAwords.Entities;
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit Award</title>
+</head>
+<body>
+    <form action="~/pages/EditAward.cshtml" method="post">
+        <label>Enter Award's ID which you want to edit:</label>
+        <input type="number" name="aID" value="" />
+        <br />
+        <label>Enter new Award's Title:</label>
+        <input type="text" name="aTitle" value="" />
+
+        <button type="submit">Submit</button>
+    </form>
+
+    @{
+        if (IsPost)
+        {
+            int aID = int.Parse(Request.Params["aID"]);
+
+            string aTitle = Request.Params["aTitle"];
+
+            var award = new Award();
+
+            award.ID = aID;
+            award.Title = aTitle;
+
+            _awardBLL.Edit(award);
+        }
+
+    }
+
+    
+</body>
+</html>

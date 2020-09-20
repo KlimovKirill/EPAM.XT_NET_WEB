@@ -9,6 +9,8 @@ namespace UsersAndAwards.DAL
 
         bool Delete(int id);
 
+        void Edit(Award award);
+
         Award GetById(int id);
 
         void SaveAwardStorage();
