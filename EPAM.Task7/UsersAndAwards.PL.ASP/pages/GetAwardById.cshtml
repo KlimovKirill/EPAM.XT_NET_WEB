@@ -11,27 +11,29 @@
     <title>Get Award By ID</title>
 </head>
 <body>
-        <form action="~/pages/GetAwardById" method="post">
-            <label>Enter Award's ID which you want to see:</label>
-            <input type="number" name="id" value="" />
+    <form action="~/pages/GetAwardById" method="post">
+        <label>Enter Award's ID which you want to see:</label>
+        <input type="number" name="id" value="" />
 
-            <button type="submit">Submit</button>
-        </form>
+        <button type="submit">Submit</button>
+        <button type="button" id="homeBtn">Home</button>
+    </form>
 
-        @{
-            if (IsPost)
-            {
-                int aID = int.Parse(Request.Params["id"]);
+    @{
+        if (IsPost)
+        {
+            int aID = int.Parse(Request.Params["id"]);
 
-                var _userBLL = UsersAndAwardsBLLDependencies.UserLogic;
-                var _awardBLL = UsersAndAwardsBLLDependencies.AwardLogic;
+            var _userBLL = UsersAndAwardsBLLDependencies.UserLogic;
+            var _awardBLL = UsersAndAwardsBLLDependencies.AwardLogic;
 
-                <div>
-                    ID | Title <br/> 
-                    @_awardBLL.GetById(aID);
-                </div>
-            }
-
+            <div>
+                ID | Title <br />
+                @_awardBLL.GetById(aID)
+            </div>
         }
+
+    }
+    <script src="~/js/HomeButton.js"></script>
 </body>
 </html>

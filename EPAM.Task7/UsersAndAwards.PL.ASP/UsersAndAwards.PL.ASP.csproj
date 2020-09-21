@@ -89,6 +89,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="js\DeleteAward.js" />
+    <Content Include="js\HomeButton.js" />
     <Content Include="js\Scripts.js" />
     <Content Include="Web.config" />
   </ItemGroup>

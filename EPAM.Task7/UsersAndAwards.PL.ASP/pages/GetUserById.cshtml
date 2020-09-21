@@ -16,6 +16,7 @@
         <input type="number" name="id" value="" />
 
         <button type="submit">Submit</button>
+        <button type="button" id="homeBtn">Home</button>
     </form>
 
     @{
@@ -28,10 +29,11 @@
 
             <div>
                 ID | Name | Date Of Birth | Age <br />
-                @_userBLL.GetById(uID);
+                @_userBLL.GetById(uID)
             </div>
         }
 
     }
+    <script src="~/js/HomeButton.js"></script>
 </body>
 </html>

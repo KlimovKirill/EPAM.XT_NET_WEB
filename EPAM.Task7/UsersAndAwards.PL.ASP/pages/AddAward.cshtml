@@ -17,24 +17,26 @@
         <label>Award's title</label>
         <input type="text" name="awardTitle" value="" />
         <button type="submit">Submit</button>
+        <button type="button" id="homeBtn">Home</button>
     </form>
 
     @{
         if (IsPost)
         {
-            //title
+            
             string title = Request.Params["awardTitle"];
 
 
             var _userBLL = UsersAndAwardsBLLDependencies.UserLogic;
             var _awardBLL = UsersAndAwardsBLLDependencies.AwardLogic;
 
-            var award = new Award ();
+            var award = new Award();
 
             award.Title = title;
             _awardBLL.Add(award);
         }
 
     }
+    <script src="~/js/HomeButton.js"></script>
 </body>
 </html>
