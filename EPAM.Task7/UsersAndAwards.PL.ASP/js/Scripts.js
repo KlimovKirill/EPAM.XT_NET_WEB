@@ -19,6 +19,10 @@ showUsersBtn.onclick = function () {
     redirect('/pages/GetAllUsers.cshtml');
 }
 
+showAwardsBtn.onclick = function () {
+    redirect('/pages/GetAllAwards.cshtml');
+}
+
 addUserBtn.onclick = function () {
     redirect('/pages/AddUser.cshtml');
 }
@@ -37,10 +41,6 @@ addAwardBtn.onclick = function () {
 
 delAwardBtn.onclick = function () {
     redirect('/pages/DeleteAward.cshtml');
-}
-
-showAwardsBtn.onclick = function () {
-    redirect('/pages/GetAllAwards.cshtml');
 }
 
 getAwardByIdBtn.onclick = function () {

@@ -1,17 +1,19 @@
-﻿@{
-    Layout = null;
+﻿@if (IsPost)
+{
+    var user = Request["UserName"];
+    var password = Request["Password"];
+
+    FormsAuthentication.SetAuthCookie(user, createPersistentCookie: true);
+
+    Response.Redirect("~");
+    return;
 }
 
-<!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title></title>
-</head>
-<body>
-    <div>
-    
-    </div>
-</body>
-</html>
+<form action="~/pages/Login.cshtml" method="post">
+    <label for="UserName">User Name:</label>
+    <input type="text" name="UserName" />
+    <label for="Password">Password:</label>
+    <input type="password" name="Password" />
+    <button type="submit">Log in</button>
+</form>
