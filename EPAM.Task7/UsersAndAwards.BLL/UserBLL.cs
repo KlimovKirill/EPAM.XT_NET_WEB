@@ -22,19 +22,19 @@ namespace UsersAndAwards.BLL
         public void Add(User user)
         {
             _userDAL.Add(user);
-            _userDAL.SaveUserStorage();
+            //_userDAL.SaveUserStorage();
         }
 
         public void Delete(int id)
         {
             _userDAL.Delete(id);
-            _userDAL.SaveUserStorage();
+            //_userDAL.SaveUserStorage();
         }
 
         public void Edit(User user)
         {
             _userDAL.Edit(user);
-            _userDAL.SaveUserStorage();
+            //_userDAL.SaveUserStorage();
         }
 
         public IEnumerable<User> GetAll()

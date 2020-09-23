@@ -28,7 +28,8 @@
             var _awardBLL = UsersAndAwardsBLLDependencies.AwardLogic;
 
             <div>
-                ID | Name | Date Of Birth | Age <br />
+                ID | Name | Age <br />
+                <img src=@_userBLL.GetById(uID).ImageURL height="25" width="25" />
                 @_userBLL.GetById(uID)
             </div>
         }

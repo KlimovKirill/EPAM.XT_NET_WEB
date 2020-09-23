@@ -22,25 +22,25 @@ namespace UsersAndAwards.BLL
         public void Add(Award award)
         {
             _awardDAL.Add(award);
-            _awardDAL.SaveAwardStorage();
+            //_awardDAL.SaveAwardStorage();
         }
 
         public void AddAwardToUser(int awardId, int userId)
         {
             _awardDAL.AddAwardToUser(awardId, userId);
-            _awardDAL.SaveAwardToUserStorage();
+            //_awardDAL.SaveAwardToUserStorage();
         }
 
         public void Delete(int id)
         {
             _awardDAL.Delete(id);
-            _awardDAL.SaveAwardStorage();
+            //_awardDAL.SaveAwardStorage();
         }
 
         public void Edit(Award award)
         {
             _awardDAL.Edit(award);
-            _awardDAL.SaveAwardStorage();
+            //_awardDAL.SaveAwardStorage();
         }
 
         public IEnumerable<Award> GetAll()

@@ -12,6 +12,8 @@ namespace UsersAndAwords.Entities
 
         public string Title { get; set; }
 
+        public string ImageURL = "https://www.flaticon.com/svg/static/icons/svg/3112/3112946.svg";
+
         public override string ToString()
         {
             return $"{ID} {Title}";

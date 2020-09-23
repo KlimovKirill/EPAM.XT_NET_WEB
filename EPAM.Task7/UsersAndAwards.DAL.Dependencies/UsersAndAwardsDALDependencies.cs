@@ -7,9 +7,9 @@ namespace UsersAndAwards.DAL.Dependencies
 
         private static IUserDAO _userDAO;
 
-        public static IAwardDAO AwardDAO => _awardDAO ?? (_awardDAO = new AwardDAO());
+        public static IAwardDAO AwardDAO => _awardDAO ?? (_awardDAO = new AwardSQLDao());
 
-        public static IUserDAO UserDAO => _userDAO ?? (_userDAO = new UserDAO());
+        public static IUserDAO UserDAO => _userDAO ?? (_userDAO = new UserSQLDao());
 
         public static void SaveAwardInfo()
         {

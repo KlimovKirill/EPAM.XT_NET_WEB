@@ -24,7 +24,7 @@
             foreach (var award in _awardBLL.GetAll())
             {
                 <div>
-                    @award
+                    <img src=@award.ImageURL height="25" width="25" /> @award
                 </div>
             }
 

@@ -21,7 +21,7 @@
 
         foreach (var user in _userBLL.GetAll())
         {
-            <div> @user </div>
+            <div><img src=@user.ImageURL height="25" width="25" /> @user </div>
 
             <p>Awards:</p>
 
@@ -31,7 +31,10 @@
             {
                 if (item.Value.Contains(user.ID))
                 {
-                    <div>@_awardBLL.GetById(item.Key)</div>
+                    <div>
+                        @*<img src=@_awardBLL.GetById(item.Key).ImageURL height="25" width="25" />*@
+                        @_awardBLL.GetById(item.Key)
+                    </div>
                 }
             }
 
